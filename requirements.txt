@@ -1,0 +1,8 @@
+# Project dependencies
+#
+# Purpose:
+#   Track Python packages required for this data analytics project.
+#
+# Notes:
+#   No dependencies are pinned yet because business logic and runtime
+#   implementation have not been added.
