@@ -24,7 +24,11 @@ env/
 # Operating system files
 .DS_Store
 
-# Local data outputs
+# Raw datasets (keep folder only)
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed datasets (keep folder only)
 data/processed/*
 !data/processed/.gitkeep
 
