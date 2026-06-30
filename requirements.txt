@@ -6,3 +6,5 @@
 # Notes:
 #   No dependencies are pinned yet because business logic and runtime
 #   implementation have not been added.
+
+python-dotenv

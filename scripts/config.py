@@ -10,7 +10,10 @@ without hardcoding secrets in source code.
 
 from pathlib import Path
 
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ModuleNotFoundError:
+    load_dotenv = None
 
 
 # Project root directory
@@ -24,5 +27,6 @@ NOTEBOOKS_DIR = PROJECT_ROOT / "notebooks"
 SQL_DIR = PROJECT_ROOT / "sql"
 DOCS_DIR = PROJECT_ROOT / "docs"
 
-# Load environment variables from .env
-load_dotenv(PROJECT_ROOT / ".env")
+# Load environment variables from .env when python-dotenv is installed.
+if load_dotenv is not None:
+    load_dotenv(PROJECT_ROOT / ".env")
